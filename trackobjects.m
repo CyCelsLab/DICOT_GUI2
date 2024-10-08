@@ -71,10 +71,10 @@ for i=1:lastlabel
         tracks(re).x=x(beadi);
         tracks(re).y=y(beadi);
         tracks(re).frame=frame(beadi);
-        % modified ARC 28/5/2016
-        ALLtracks{re}= [(re*ones(size(tracks(re).x)))',(tracks(re).frame)', (tracks(re).x)', (tracks(re).y)', ((tracks(re).frame)')*interval];
-        ALLtracks{re}(:,5)=ALLtracks{re}(:,5)-ALLtracks{re}(1,5);
-        % object number, frame number, centroid(x,y), time
+        ALLtracks{re}= [(re*ones(size(tracks(re).x)))', (tracks(re).frame)', (tracks(re).x)', (tracks(re).y)', ((tracks(re).frame)')*interval];
+% Remove the normalization by commenting out the next line (09,August 2024... edited by prachi PhD 2024 )
+% ALLtracks{re}(:,5)=ALLtracks{re}(:,5)-ALLtracks{re}(1,5);
+
     else
         continue
     end
